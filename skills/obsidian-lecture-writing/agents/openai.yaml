@@ -1,0 +1,6 @@
+interface:
+  display_name: "Obsidian 深入理解式讲义"
+  short_description: "仅编写或实质改写讲义时启用，以章首章末回顾、知识连接和读者审查建立理解"
+  default_prompt: "请用 $obsidian-lecture-writing 编写下面主题的自足讲义：从已有基础建立对象、动机与知识关系，每章开头和结尾概括主要内容，并在交付前从读者视角检查推导、直觉与小变式。"
+policy:
+  allow_implicit_invocation: true

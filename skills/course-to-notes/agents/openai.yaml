@@ -1,0 +1,6 @@
+interface:
+  display_name: "Course to Notes"
+  short_description: "将视频课程整理成图文阅读稿，保留教学过程并按学习证据标记章节重点"
+  default_prompt: "使用 $course-to-notes 将我指定的课程整理成带时间定位、配图、学习衔接与章节重点的阅读稿。"
+policy:
+  allow_implicit_invocation: true

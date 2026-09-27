@@ -1,0 +1,72 @@
+{
+  "synthetic": true,
+  "evaluation": "author semantic review; not independent routing test",
+  "cases": [
+    {
+      "id": "B19",
+      "input": "我学过一元导数定义和基本求导，没有学过多元微积分；章节含一元回顾和梯度",
+      "actual_decision": [
+        {
+          "concept": "一元导数",
+          "depth": "definition/computation",
+          "status": "studied",
+          "mastery": "not_assessed"
+        },
+        {
+          "concept": "多元梯度",
+          "depth": "geometric interpretation",
+          "status": "explicitly_unlearned",
+          "mastery": "not_assessed"
+        }
+      ]
+    },
+    {
+      "id": "B20",
+      "input": "只有未确认阅读的助手生成梯度讲义",
+      "actual_decision": [
+        {
+          "concept": "梯度",
+          "depth": "unspecified",
+          "status": "exposure_only",
+          "mastery": "not_assessed"
+        }
+      ]
+    },
+    {
+      "id": "B21",
+      "input": "无学习记录；课程材料明确为核心定义",
+      "actual_decision": {
+        "status": "unknown",
+        "importance": "key",
+        "advice": "undetermined"
+      }
+    },
+    {
+      "id": "B22",
+      "input": "用户自述学过且会应用一元例题；教师明确强调当前证明条件",
+      "actual_decision": {
+        "status": "studied",
+        "mastery": "self_reported",
+        "depth": "one-variable example application",
+        "importance": "key",
+        "advice": "targeted_review"
+      }
+    },
+    {
+      "id": "B25",
+      "input": "记录只支持定义/计算；本章是一般定理证明",
+      "actual_decision": {
+        "proof_status": "unknown",
+        "mastery": "not_assessed"
+      }
+    },
+    {
+      "id": "B26",
+      "input": "方向导数与directional derivative指同一概念；物理field与代数field不同",
+      "actual_decision": {
+        "alias_match": true,
+        "cross_domain_match": false
+      }
+    }
+  ]
+}
