@@ -13,8 +13,8 @@ description: 推荐适合学习基础的视频课程，或将指定课程视频�
 2. **已选课程**：核对讲师、讲次、发布页年份、实际录制年份和具体视频版本；不换课。只澄清会影响结果的歧义。建立素材清单，实际检查获取、解码、视觉和 ASR 能力，按 [acquisition.md](references/acquisition.md) 降级。
 3. **整理**：读取 [editing-and-translation.md](references/editing-and-translation.md)。从字幕/音轨、画面和同版本课件形成语义单元，再选关键帧。脚本不承担语义判断。长视频保留相邻段上下文，逐讲交付。
 4. **学习衔接**：读取 [learner-context.md](references/learner-context.md)，先提取各章概念与深度，再匹配用户指定范围的证据。无记录仍继续，标待确认。重点独立判断。每章标题后、正文和首图前放紧凑标记，目录同步；不删正文。
-5. **成稿与续作**：按 [output-and-state.md](references/output-and-state.md) 写正文、术语和机器记录。根据用户指定格式调用环境中的文档工具；Word 必须是真实 docx，需打开/渲染核对。先比较哈希与备份，再局部修订，保留手动批注。
-6. **验收**：运行结构检查，实际核对内容、公式、图片与最终阅读环境。参考 [acceptance-cases.md](references/acceptance-cases.md) 选择适用行为案例。报告已处理区间、素材缺失、已核对内容和未验证分支；结构通过不证明语义正确。
+5. **成稿与续作**：按 [output-and-state.md](references/output-and-state.md) 写正文、术语和机器记录，并落实其中的可迁移交付要求。根据用户指定格式调用环境中的文档工具；Word 必须是真实 docx，需打开/渲染核对。先比较哈希与备份，再局部修订，保留手动批注。
+6. **验收**：运行结构检查，实际核对内容、公式、图片与最终阅读环境；含本地依赖的交付包须从新目录中的解压副本验收。参考 [acceptance-cases.md](references/acceptance-cases.md) 选择适用行为案例。报告已处理区间、素材缺失、已核对内容和未验证分支；结构通过不证明语义正确。
 
 ## 核心不变量
 
