@@ -2,9 +2,9 @@
 
 [English](README.md)
 
-三个 Codex 技能：把课程视频整理成阅读稿，讲清楚理解卡点，以及写出脱离聊天也能读懂的讲义。
+三个可用于 Codex 和 DeepSeek Harness 的技能：把课程视频整理成阅读稿，讲清楚理解卡点，以及写出脱离聊天也能读懂的讲义。
 
-每个技能是一份供 Codex 读取的指令。`course-to-notes` 还附带字幕解析、视频抽帧和输出检查脚本。三个技能可以独立安装；指令主要用中文，输出语言由你的请求决定。
+每个技能是一份供 Agent 读取的指令。`course-to-notes` 还附带字幕解析、视频抽帧和输出检查脚本。三个技能可以独立安装；指令主要用中文，输出语言由你的请求决定。
 
 ## 选哪个技能
 
@@ -15,6 +15,18 @@
 | 编写或实质改写讲义，把读者需要的背景和推理连接补齐 | [obsidian-lecture-writing](skills/obsidian-lecture-writing/SKILL.md) |
 
 ## 安装
+
+### DeepSeek Harness
+
+在实际使用的 profile 中，将三个技能作为一个 DSH 插件安装：
+
+```sh
+dsh plugin --profile web add github:XSY-28/learning-skills
+```
+
+在 DSH 中调用 `/course-to-notes`、`/explain-for-understanding` 或 `/obsidian-lecture-writing`。前提、示例与更新方式见 [DSH 使用说明](docs/dsh.zh-CN.md)。
+
+### Codex
 
 在 Codex 中发送：
 
@@ -45,6 +57,8 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 </details>
 
 ## 使用
+
+以下示例使用 Codex 语法；在 DSH 中将 `$技能名称` 换成 `/技能名称`，见 [DSH 使用说明](docs/dsh.zh-CN.md)。
 
 ### 讲清楚一个概念
 
@@ -82,7 +96,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 讲解和讲义技能没有脚本依赖。课程辅助脚本使用 Python 3.10+ 标准库；抽帧还需要 `PATH` 中可用的 `ffmpeg` 和 `ffprobe`。
 
-获取视频、音频转写和 Word/PDF 导出取决于 Codex 环境中可用的工具。本仓库不附带视频下载器、转写模型或文档转换器。
+获取视频、音频转写和 Word/PDF 导出取决于 Agent 环境中可用的工具。本仓库不附带视频下载器、转写模型或文档转换器。
 
 ## 验证与贡献
 

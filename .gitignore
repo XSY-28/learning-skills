@@ -6,3 +6,5 @@ dist/
 .env
 .env.*
 *.log
+node_modules/
+*.tgz
