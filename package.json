@@ -1,0 +1,35 @@
+{
+  "name": "dsh-learning-skills",
+  "version": "0.1.0",
+  "description": "Three learning skills for DeepSeek Harness: course notes, conceptual explanations, and self-contained lecture chapters.",
+  "type": "module",
+  "main": "./dsh/index.js",
+  "exports": {
+    ".": "./dsh/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": ["dsh/*.js", "dsh/*.json", "skills/*/SKILL.md", "skills/*/LICENSE", "skills/*/agents/*.yaml", "skills/*/references/*.md", "skills/*/references/*.json", "skills/*/scripts/*.py", "locale/*.json", "cordis.patch.yml", "docs/dsh.md", "docs/dsh.zh-CN.md", "docs/validation.md", "README.zh-CN.md"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XSY-28/learning-skills.git"
+  },
+  "license": "MIT",
+  "keywords": ["dsh-plugin", "deepseek-harness", "skills", "learning", "course-notes", "obsidian"],
+  "engines": {"node": "^22.19.0 || >=24.0.0"},
+  "dsh": {"bundle": {"patch": "./cordis.patch.yml"}},
+  "scripts": {
+    "test": "node --test tests/dsh/*.test.js",
+    "check:catalog": "python3 scripts/build_dsh_catalog.py --check"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": ">=0.1.7-rc.2 <0.1.8-0 || >=0.1.7 <0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-skill": { "optional": true }
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.4",
+    "@deepseek-ai/dsh-skill": "0.1.7-rc.2"
+  }
+}

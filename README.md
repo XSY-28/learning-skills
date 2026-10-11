@@ -2,7 +2,7 @@
 
 [中文](README.zh-CN.md)
 
-Three Codex skills for turning lectures into notes, working through confusing concepts, and writing chapters that can be read without the original chat.
+Three skills for Codex and DeepSeek Harness: turn lectures into notes, work through confusing concepts, and write chapters that can be read without the original chat.
 
 Each skill is a folder of agent instructions. `course-to-notes` also includes scripts for subtitles, video frames, and output checks. You can install any of them on its own. The instructions are mainly in Chinese; you choose the output language.
 
@@ -15,6 +15,18 @@ Each skill is a folder of agent instructions. `course-to-notes` also includes sc
 | Write or substantially revise a lecture chapter, including the background needed to follow it | [obsidian-lecture-writing](skills/obsidian-lecture-writing/SKILL.md) |
 
 ## Install
+
+### DeepSeek Harness
+
+Install all three as a DSH plugin in your chosen profile:
+
+```sh
+dsh plugin --profile web add github:XSY-28/learning-skills
+```
+
+In DSH, invoke `/course-to-notes`, `/explain-for-understanding`, or `/obsidian-lecture-writing`. See the [DSH guide](docs/dsh.md) for prerequisites, examples, and updates.
+
+### Codex
 
 In Codex, send:
 
@@ -45,6 +57,8 @@ Or download this repository and copy the skill folders you want from `skills/` i
 </details>
 
 ## Use
+
+The examples below use Codex syntax. In DSH, replace `$skill-name` with `/skill-name`, as shown in the [DSH guide](docs/dsh.md).
 
 ### Work through a concept
 
@@ -82,7 +96,7 @@ These workflows are for learning and teaching. A formula lookup, translation, or
 
 The explanation and chapter-writing skills have no script dependencies. The course helpers use Python 3.10+ and the standard library; extracting video frames also needs `ffmpeg` and `ffprobe` on `PATH`.
 
-Video access, audio transcription, and Word/PDF export depend on tools available to Codex. This repository does not include a video downloader, transcription model, or document converter.
+Video access, audio transcription, and Word/PDF export depend on tools available in your agent environment. This repository does not include a video downloader, transcription model, or document converter.
 
 ## Checks and contributions
 

@@ -21,6 +21,29 @@ The initial publication was locally checked on macOS with Python 3.13.14 and FFm
 
 The GitHub Actions workflow runs package checks and the same tests on Ubuntu with Python 3.10 and 3.13. Consult the actual [workflow runs](https://github.com/XSY-28/learning-skills/actions) for their status; configuration alone is not a successful run.
 
+## DSH plugin checks
+
+The DSH package was locally checked on macOS with Node.js 24.19.0, DSH skill registry 0.1.7-rc.2, and Cordis 4.0.4. All four Node tests passed:
+
+- Discover, load, and render all three skills through the real DSH registry, including their referenced files.
+- Remove skills on plugin disposal and restore them on remount.
+- Preserve a same-name runtime customization and restore the bundled default when that customization is removed.
+- Pack and extract the plugin into a new directory, load it without a dependency symlink, and run the packaged course helper's CLI help.
+
+The actual DSH CLI also installed the tarball in an isolated temporary profile. Its composed configuration contained the plugin row, and the installed provider loaded all three skills through the real registry. No user profile or model request was used. The runtime adapter imports only Node built-ins; its optional DSH peer documents the tested host API without requiring a second host SDK inside the installed package.
+
+To reproduce the repository checks:
+
+```sh
+python3 scripts/build_dsh_catalog.py --check
+npm ci --ignore-scripts
+npm test
+```
+
+The catalog is generated from the shared skill headers; after changing a header, run `python3 scripts/build_dsh_catalog.py` and commit the updated catalog. PyYAML is a development dependency, not a plugin runtime dependency. The package explicitly includes required resource types and excludes Python caches.
+
+These checks establish installation and instruction/resource loading, not a Web UI conversation, reliable model selection, teaching quality, or whole-course processing. The DSH CI job executes the registry and packed-artifact tests; its actual result must be read from the workflow run.
+
 ## Not established by this release
 
 These tests do not establish:

@@ -57,7 +57,7 @@ def check():
             errors.append(f'{name}: {exc}')
 
     links = 0
-    docs = [ROOT / 'README.md', ROOT / 'README.zh-CN.md', ROOT / 'docs/validation.md']
+    docs = [ROOT / 'README.md', ROOT / 'README.zh-CN.md', *sorted((ROOT / 'docs').glob('*.md'))]
     for path in docs + [p for p in files if p.suffix == '.md']:
         if not path.is_file():
             errors.append(f'missing {path.relative_to(ROOT)}')
