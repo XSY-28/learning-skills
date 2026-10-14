@@ -79,6 +79,8 @@ into Chinese Markdown notes in ./course-notes.
 
 The workflow preserves the lecture's teaching sequence, derivations, questions, and meaningful repetition. Notes include source timestamps and relevant images where the material is available; missing or unclear material is reported. You can supply learning records to get chapter-level reading suggestions; without records, prior learning stays unconfirmed.
 
+It reads the full available transcript first, maps the teaching sequence, then checks visuals at relevant source timestamps. Necessary playback can use a supported faster speed, with pauses or slower review for dense derivations and demonstrations. Transcript gaps and unspoken board work still need checking; fewer screenshots do not establish complete coverage. This changes the processing workflow, without guaranteeing a fixed speedup.
+
 If you have not chosen a course, give your background and goal and ask for course recommendations first.
 
 ### Write a chapter

@@ -39,6 +39,7 @@
   - source：id/kind/ref/version/attribution/license/verification，verification=checked 仅指已按实际范围核对；可用其他具体状态表示未核对。记录 source 的核对范围说明。视频 ID 须在 sources 中。
   - asset：path/source_id，以及视频 requested_time_s/timestamp_basis=requested_seek_time 或课件 page（从 1 起）。可另加 source_time_s 和 timeline_offset_s，明确片段与原片时间映射；不把请求时刻当精确解码时间。
   - 尚未处理整讲时正文显式说明全讲剩余范围；processing_range 只代表此次范围。来源缺口、声音未核对等写 unresolved_items。
+  - 字幕优先处理时，source 的核对范围说明区分全文已读、视觉变化概览、实际定点/连续回看及声音复核；倍速仅记录确实生效的值和区间。沿用原视频时间；读取字幕或抽帧成功不把整视频自动标 checked。未排除的视觉遗漏/字幕空档、截断与疑点写 unresolved_items，review_status 不能仅凭覆盖结构通过升级 checked。
 - **coverage.json**：processing_range、segments。segment：id/start_s/end_s/disposition/section_id/evidence/reason。evidence 为非空来源定位数组，reason 非空。included 的 section_id 必须存在；其他可 null。disposition 固定为 included / omitted_noninstructional / omitted_assignment / unresolved。主段按时间排序，完整划分处理区间，不重叠、不留缺口；并行板书和声音可写在同段 evidence 中。unresolved 发警告，不能算核对完成。
 - **glossary.json**：course_id、entries。entry：source_term/domain/concept/target_language/rendering/keep_original（布尔）/evidence（定位数组）/user_override（布尔）。唯一键是前四项组合，不对 source_term 单独全局替换。
 - **revisions.json**：entries。每项 at（ISO 日期时间或无法确定时 null）、correction、affected_files、checked_scope、unchecked_scope、backup_paths；后三类范围、路径为数组。记录实际范围，不把未检查的讲次标成同步。
