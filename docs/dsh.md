@@ -4,6 +4,8 @@
 
 The `dsh-learning-skills` plugin supplies all four skills to DSH's skill registry. Each keeps its own name, instructions, references, and helper scripts. It uses the same source folders as the Codex installation.
 
+The skill displayed as **航母是怎样建成的** keeps `/evolutionary-understanding` as its invocation name.
+
 ## Install and invoke
 
 With DSH installed, add the plugin to the profile you actually use (replace `web` for another profile):
