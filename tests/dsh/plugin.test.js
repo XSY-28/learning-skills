@@ -81,6 +81,9 @@ test('the packed artifact works after relocation and contains its referenced cou
   assert.ok(pack.files.every(file => !/(node_modules|__pycache__|\.pyc$|^tests\/|^scripts\/|^task_plan)/.test(file.path)))
   execFileSync('tar', ['-xzf', join(temp, pack.filename), '-C', temp])
   const packageRoot = join(temp, 'package')
+  for (const relative of ['SKILL.en.md', 'references/software-history.en.md']) {
+    assert.ok((await readFile(join(packageRoot, 'skills/evolutionary-understanding', relative), 'utf8')).length > 0)
+  }
   const manifest = JSON.parse(await readFile(join(packageRoot, 'package.json'), 'utf8'))
   assert.equal(manifest.dsh.bundle.patch, './cordis.patch.yml')
   assert.ok((await readFile(join(packageRoot, manifest.dsh.bundle.patch), 'utf8')).includes('name: dsh-learning-skills'))

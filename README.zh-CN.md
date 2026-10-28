@@ -64,7 +64,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 ### 航母是怎样建成的
 
-显示名称为“航母是怎样建成的”，调用标识仍为 `evolutionary-understanding`。
+中文名称为“航母是怎样建成的”，英文名称为“How an Aircraft Carrier Is Built”，调用标识仍为 `evolutionary-understanding`。技能正文与软件历史取证指南均有中英两版，可通过文首语言链接切换。
 
 ```text
 使用 $evolutionary-understanding，基于 Git 历史讲清 DSH 的关键设计变更。

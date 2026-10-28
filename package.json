@@ -9,7 +9,7 @@
     "./package.json": "./package.json",
     "./locale/*.json": "./locale/*.json"
   },
-  "files": ["dsh/*.js", "dsh/*.json", "skills/*/SKILL.md", "skills/*/LICENSE", "skills/*/agents/*.yaml", "skills/*/references/*.md", "skills/*/references/*.json", "skills/*/scripts/*.py", "locale/*.json", "cordis.patch.yml", "docs/dsh.md", "docs/dsh.zh-CN.md", "docs/validation.md", "README.zh-CN.md"],
+  "files": ["dsh/*.js", "dsh/*.json", "skills/*/SKILL.md", "skills/*/SKILL.*.md", "skills/*/LICENSE", "skills/*/agents/*.yaml", "skills/*/references/*.md", "skills/*/references/*.json", "skills/*/scripts/*.py", "locale/*.json", "cordis.patch.yml", "docs/dsh.md", "docs/dsh.zh-CN.md", "docs/validation.md", "README.zh-CN.md"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/XSY-28/learning-skills.git"
