@@ -86,11 +86,13 @@ If you have not chosen a course, give your background and goal and ask for cours
 ### Write a chapter
 
 ```text
-Use $obsidian-lecture-writing to write an introductory chapter on conditional
+Use $obsidian-lecture-writing in detailed mode to write an introductory chapter on conditional
 expectation for someone who knows basic probability. Deliver it in this chat.
 ```
 
 The skill asks Codex to introduce concepts before relying on them, explain the reasons behind key steps, and review the chapter from a reader's position. To save it in Obsidian, specify your vault and destination file.
+
+Choose `simplify` for a compact, outline-style chapter or systematic review, and `detailed` for step-by-step explanations, worked examples, and necessary prerequisites. Both preserve key relationships and conditions. The mode controls explanation detail, not theoretical depth or topic coverage; individual difficult sections can be expanded without changing the whole chapter. If no mode is specified, the skill uses the current learning purpose and asks only when the distinction materially affects the result. Syntax and formula lookups remain outside this skill in either mode.
 
 These workflows are for learning and teaching. A formula lookup, translation, or formatting fix can stay brief. Automatic skill selection depends on the client; use `$skill-name` when you want to choose explicitly.
 
