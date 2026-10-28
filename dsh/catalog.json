@@ -9,6 +9,6 @@
   },
   {
     "name": "obsidian-lecture-writing",
-    "description": "仅在用户当前要求编写、实质重写或补充供循序学习的讲义正文时使用（create or substantively revise lecture notes），支持 Obsidian 讲义。按概念依赖建立知识、关系和有边界的直觉，并做章首章末回顾与读者审查。不用于语法/公式速查表、普通笔记整理、资料摘要/摘录/翻译、聊天答疑或系统口头讲解、仅列目录/学习计划、仅审查讲义、纯格式/LaTeX/链接修复、编码排错或 skill 制作。学科词、Obsidian 路径、提到讲义或此前写过讲义本身都不构成触发。混合请求仅对讲义正文部分生效。"
+    "description": "仅在用户当前要求编写、实质重写或补充供循序学习或系统复习的讲义正文时使用（create or substantively revise lecture notes），支持 Obsidian 讲义。提供 simplify 紧凑档与 detailed 展开档，按概念依赖建立知识关系，并做章首章末回顾与读者审查。不用于语法/公式速查表、普通笔记整理、资料摘要/摘录/翻译、聊天答疑或系统口头讲解、仅列目录/学习计划、仅审查讲义、纯格式/LaTeX/链接修复、编码排错或 skill 制作。档位词、学科词、Obsidian 路径、提到讲义或此前写过讲义本身都不构成触发。混合请求仅对讲义正文部分生效。"
   }
 ]

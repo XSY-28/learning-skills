@@ -77,3 +77,28 @@ The course instructions now prefer reading the complete available transcript, ma
 Real player speed controls, audio transcription, full-length course processing, automatic routing, and a measured end-to-end acceleration remain unverified in this update. Video access does not establish audio access; a filled coverage timeline does not establish that all teaching content was retained. CI results must be read for the published commit rather than inferred from local checks.
 
 本轮优化优先完整字幕与按需定位，必要时允许已核实的倍速，不减少教学范围。本地脚本/加载测试、字幕解析和独立合成素材整理已执行，正文保留字幕外短暂条件、试错/纠正、三次强调及问答；真实播放器倍速、完整真实讲次、ASR 和整项处理提速尚未验证，不作“零遗漏”或固定提速倍数保证。
+
+## Lecture explanation modes (2026-10-28)
+
+`obsidian-lecture-writing` now supports `simplify` and `detailed`. Both preserve the requested learning goals, key relationships, and conditions. Mode selection changes explanation detail rather than theoretical depth or topic scope. The [teaching examples](../skills/obsidian-lecture-writing/references/teaching-examples.md) include two short chapters with the same prerequisites and learning goal: explaining the two expectations in expected risk.
+
+The author reviewed those actual drafts: the compact version retains the roles of the inner and outer expectations and the test-distribution condition; the expanded version adds a worked entry point, a table, and a probability variation without adding a new learning goal. Exact rational arithmetic checks the values 2, 1, 3/2, and 7/4. This is author rehearsal and content checking, not an independent learner study or a fresh model invocation.
+
+The following boundary decisions were reviewed against the instructions; they are not automatic-routing measurements:
+
+| Request | Expected instruction behavior |
+|---|---|
+| Write a compact review chapter using `simplify` | Keep concept relationships, essential derivation steps and conditions; remove redundant explanations and default exercises. |
+| Write a first-learning chapter using `detailed` | Establish required objects and prerequisites, expand difficult connections, and use purposeful examples. |
+| First learning, explicitly requesting `simplify` | Honor the explicit mode while filling indispensable gaps locally. |
+| Review, explicitly requesting `detailed` | Honor the explicit mode without assuming poor ability or adding unrelated topics. |
+| Continue the same chapter without mentioning its mode | Retain its selected mode unless the current request changes it. |
+| Write a new lecture on a new topic | Reassess the current purpose; do not treat a previous mode as a permanent preference. |
+| Expand only one difficult section | Apply a local adjustment and preserve the rest of the chapter. |
+| Write a `detailed` chapter within a stated length limit | Respect the limit and disclose any necessary scope tradeoff. |
+| Supply a complete proof in `simplify` | Preserve the proof obligation; concise wording cannot silently replace it with a sketch. |
+| Produce a syntax lookup card in `simplify` | Do not enter the lecture-writing workflow. |
+| Explain a confusing formula in chat using `detailed` | Do not enter the lecture-writing workflow without a request for a lecture artifact. |
+| Mode cannot be inferred and materially changes the result | Ask one focused question about review versus first learning. |
+
+Local checks passed: package validation reported 3 skills, 21 runtime files, 36 local links, and 0 errors; the generated catalog and Codex skill-creator structural validator passed; all 4 existing DSH registry/relocated-package tests passed without skips. These checks cover instruction delivery, not automatic routing, adaptive teaching quality, reader mastery, or Obsidian rendering. Published CI status must be checked for the actual commit.
