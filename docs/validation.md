@@ -1,6 +1,6 @@
 # Validation scope
 
-This public repository contains three skill packages and wholly synthetic course-tool fixtures. It contains no real course media, transcripts, or personal learning records. An example learner profile in a fixture is synthetic, not a record about a real person.
+This public repository contains four skill packages and wholly synthetic course-tool fixtures. It contains no real course media, transcripts, or personal learning records. An example learner profile in a fixture is synthetic, not a record about a real person.
 
 ## Reproducible checks
 
@@ -56,7 +56,15 @@ These tests do not establish:
 - Word/PDF/HTML export or Obsidian/Microsoft Word application rendering.
 - Cross-client or cross-platform compatibility beyond checks actually reported by CI.
 
-The two instruction-only skills have packaging checks in this release, not a newly executed teaching-effectiveness study. The course skill's [behavioral acceptance cases](../skills/course-to-notes/references/acceptance-cases.md) define useful future evaluation tasks; their presence does not mean they all passed.
+The instruction-only skills have packaging checks in this release, not a newly executed teaching-effectiveness study. The course skill's [behavioral acceptance cases](../skills/course-to-notes/references/acceptance-cases.md) define useful future evaluation tasks; their presence does not mean they all passed.
+
+## Evolutionary understanding — 2026-10-28
+
+Added `evolutionary-understanding` with its software-history reference and Codex metadata. Its section titles name concrete changes directly; the instructions distinguish documented history, inference, and teaching reconstructions, and preserve branches, reversals, costs, and uncertainty.
+
+Local package validation reported 4 skills, 25 runtime files, 39 local links, and 0 errors. The generated DSH catalog matched all four entrypoints. All four existing DSH registry and relocated-package tests passed without skips, including loading the new skill and its reference after packing. These checks used Node.js 24.19.0 and the repository's existing DSH 0.1.7-rc.2 registry dependency; they do not establish compatibility with newer DSH versions, a live Web conversation, automatic routing, or improved learning speed.
+
+新增演化式理解技能及 Git 历史取证附页，标题直接概括具体修改。本地结构与链接检查通过，四项既有 DSH 注册及迁移目录打包测试全部通过、无跳过。验证覆盖技能和资源交付，不代表新版 DSH 兼容性、真实网页对话或学习效果已验证。
 
 ## 中文说明
 

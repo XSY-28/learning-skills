@@ -1,7 +1,7 @@
 {
   "name": "dsh-learning-skills",
   "version": "0.1.0",
-  "description": "Three learning skills for DeepSeek Harness: course notes, conceptual explanations, and self-contained lecture chapters.",
+  "description": "Learning skills for DeepSeek Harness: course notes, conceptual explanations, lecture chapters, and understanding systems through their evolution.",
   "type": "module",
   "main": "./dsh/index.js",
   "exports": {

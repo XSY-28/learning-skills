@@ -10,7 +10,8 @@ import SkillRegistry, { renderSkillContent } from '@deepseek-ai/dsh-skill'
 import * as plugin from '../../dsh/index.js'
 
 const root = fileURLToPath(new URL('../../', import.meta.url))
-const names = ['course-to-notes', 'explain-for-understanding', 'obsidian-lecture-writing']
+const names = ['course-to-notes', 'evolutionary-understanding', 'explain-for-understanding', 'obsidian-lecture-writing']
+const customizedName = 'explain-for-understanding'
 
 async function mount(t, module = plugin) {
   const ctx = new Context()
@@ -42,7 +43,7 @@ async function checkSkills(ctx, packageRoot) {
   }
 }
 
-test('real DSH registry discovers, loads and renders all three skills and resources', async t => {
+test('real DSH registry discovers, loads and renders all four skills and resources', async t => {
   const { ctx } = await mount(t)
   await checkSkills(ctx, root)
   assert.equal(await ctx.skills.get('unknown-skill'), undefined)
@@ -50,12 +51,12 @@ test('real DSH registry discovers, loads and renders all three skills and resour
 
 test('disabling the plugin removes its skills and remounting restores them', async t => {
   const { ctx, fiber } = await mount(t)
-  assert.equal((await ctx.skills.list()).length, 3)
+  assert.equal((await ctx.skills.list()).length, names.length)
   await fiber.dispose()
   assert.deepEqual(await ctx.skills.list(), [])
   ctx.plugin(plugin)
   await new Promise(resolve => setImmediate(resolve))
-  assert.equal((await ctx.skills.list()).length, 3)
+  assert.equal((await ctx.skills.list()).length, names.length)
 })
 
 test('a runtime customization overrides a bundled skill without hiding other skills', async t => {
@@ -63,14 +64,14 @@ test('a runtime customization overrides a bundled skill without hiding other ski
   const customization = ctx.plugin({
     inject: ['skills'],
     apply(ctx) {
-      ctx.skills.register({ name: names[1], description: 'Custom explanation skill', source: 'runtime', content: 'Custom instructions' })
+      ctx.skills.register({ name: customizedName, description: 'Custom explanation skill', source: 'runtime', content: 'Custom instructions' })
     },
   })
   await new Promise(resolve => setImmediate(resolve))
-  assert.equal((await ctx.skills.get(names[1])).content, 'Custom instructions')
-  assert.equal((await ctx.skills.list()).length, 3)
+  assert.equal((await ctx.skills.get(customizedName)).content, 'Custom instructions')
+  assert.equal((await ctx.skills.list()).length, names.length)
   await customization.dispose()
-  assert.equal((await ctx.skills.get(names[1])).provider, 'learning-skills')
+  assert.equal((await ctx.skills.get(customizedName)).provider, 'learning-skills')
 })
 
 test('the packed artifact works after relocation and contains its referenced course helper', async t => {
