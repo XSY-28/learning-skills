@@ -4,6 +4,8 @@
 
 The `dsh-learning-skills` plugin supplies all four skills to DSH's skill registry. Each keeps its own name, instructions, references, and helper scripts. It uses the same source folders as the Codex installation.
 
+**How an Aircraft Carrier Is Built** (Chinese display name: 航母是怎样建成的) keeps `/evolutionary-understanding` as its invocation name. Its entrypoint is Chinese; the packaged [English instructions](../skills/evolutionary-understanding/SKILL.en.md) and English software-history guide are available through the language links.
+
 ## Install and invoke
 
 With DSH installed, add the plugin to the profile you actually use (replace `web` for another profile):

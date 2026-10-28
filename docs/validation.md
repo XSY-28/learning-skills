@@ -66,6 +66,10 @@ Local package validation reported 4 skills, 25 runtime files, 39 local links, an
 
 新增演化式理解技能及 Git 历史取证附页，标题直接概括具体修改。本地结构与链接检查通过，四项既有 DSH 注册及迁移目录打包测试全部通过、无跳过。验证覆盖技能和资源交付，不代表新版 DSH 兼容性、真实网页对话或学习效果已验证。
 
+The bilingual naming update publishes the skill as **How an Aircraft Carrier Is Built / 航母是怎样建成的**, retaining the `evolutionary-understanding` identifier. Both the entrypoint instructions and software-history guide have linked English and Chinese editions. Package checks now report 4 skills, 27 runtime files, 46 local links, and 0 errors. The existing relocated-package test first exposed the missing English entrypoint, then passed after the publication allowlist was expanded to include translated entrypoints. All four DSH tests passed; this verifies delivery of the bilingual resources, not their teaching effectiveness.
+
+双语命名更新保留 `evolutionary-understanding` 调用标识，提供中英文正文及取证附页。打包测试先发现英文入口未被收录，修正发布清单后四项 DSH 测试全部通过；结构检查覆盖 27 个运行文件和 46 个本地链接、0 错误。这些检查证明双语资源随包交付，不证明教学成效。
+
 ## 中文说明
 
 本次开源验证聚焦可复现的脚本与打包：本地 28 项测试全部通过、无跳过，三个技能通过结构检查。合成视频和合成档案只验证对应脚本行为，不能推广为真实课程端到端效果或真实学习成效。

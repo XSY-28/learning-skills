@@ -4,6 +4,8 @@
 
 `dsh-learning-skills` 插件向 DSH 技能注册表提供四个技能。它们保留各自的名称、正文、参考文件和辅助脚本，与 Codex 安装共用源码目录。
 
+“航母是怎样建成的”（How an Aircraft Carrier Is Built）沿用 `/evolutionary-understanding` 作为调用标识。默认入口为中文，包内同时提供[英文正文](../skills/evolutionary-understanding/SKILL.en.md)及英文软件历史取证指南，可通过语言链接切换。
+
 ## 安装和调用
 
 已安装 DSH 后，将插件添加到实际使用的 profile；使用其他 profile 时替换 `web`：

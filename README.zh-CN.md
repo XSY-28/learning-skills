@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-四个可用于 Codex 和 DeepSeek Harness 的技能：课程阅读稿、理解式讲解、自足讲义，以及沿关键变迁理解复杂对象的演化式理解。
+四个可用于 Codex 和 DeepSeek Harness 的技能：课程阅读稿、理解式讲解、自足讲义，以及沿关键变迁理解复杂对象的“航母是怎样建成的”。
 
 每个技能是一份供 Agent 读取的指令。`course-to-notes` 还附带字幕解析、视频抽帧和输出检查脚本。四个技能可以独立安装；指令主要用中文，输出语言由你的请求决定。
 
@@ -11,7 +11,7 @@
 | 你想做的事 | 技能 |
 | --- | --- |
 | 按自己的基础选课，或把指定讲次整理成带时间定位和配图的阅读稿 | [course-to-notes](skills/course-to-notes/SKILL.md) |
-| 沿关键设计变迁理解项目、理论或制度，分析变化的约束与代价 | [evolutionary-understanding](skills/evolutionary-understanding/SKILL.md) |
+| 沿关键设计变迁理解项目、理论或制度，分析变化的约束与代价 | [航母是怎样建成的](skills/evolutionary-understanding/SKILL.md) |
 | 弄明白一个定义、方法或证明步骤为什么这样写 | [explain-for-understanding](skills/explain-for-understanding/SKILL.md) |
 | 编写或实质改写讲义，把读者需要的背景和推理连接补齐 | [obsidian-lecture-writing](skills/obsidian-lecture-writing/SKILL.md) |
 
@@ -62,7 +62,9 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 以下示例使用 Codex 语法；在 DSH 中将 `$技能名称` 换成 `/技能名称`，见 [DSH 使用说明](docs/dsh.zh-CN.md)。
 
-### 沿演化理解复杂对象
+### 航母是怎样建成的
+
+中文名称为“航母是怎样建成的”，英文名称为“How an Aircraft Carrier Is Built”，调用标识仍为 `evolutionary-understanding`。技能正文与软件历史取证指南均有中英两版，可通过文首语言链接切换。
 
 ```text
 使用 $evolutionary-understanding，基于 Git 历史讲清 DSH 的关键设计变更。
@@ -109,7 +111,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 ## 依赖
 
-讲解、讲义和演化式理解技能没有脚本依赖。课程辅助脚本使用 Python 3.10+ 标准库；抽帧还需要 `PATH` 中可用的 `ffmpeg` 和 `ffprobe`。
+讲解、讲义和“航母是怎样建成的”技能没有脚本依赖。课程辅助脚本使用 Python 3.10+ 标准库；抽帧还需要 `PATH` 中可用的 `ffmpeg` 和 `ffprobe`。
 
 获取视频、音频转写和 Word/PDF 导出取决于 Agent 环境中可用的工具。本仓库不附带视频下载器、转写模型或文档转换器。
 

@@ -11,7 +11,7 @@ Each skill is a folder of agent instructions. `course-to-notes` also includes sc
 | What you want to do | Skill |
 | --- | --- |
 | Find a course that fits your background, or turn a lecture into notes with timestamps and relevant images | [course-to-notes](skills/course-to-notes/SKILL.md) |
-| Understand a project, theory, or institution through its key changes and design tradeoffs | [evolutionary-understanding](skills/evolutionary-understanding/SKILL.md) |
+| Understand a project, theory, or institution through its key changes and design tradeoffs | [How an Aircraft Carrier Is Built](skills/evolutionary-understanding/SKILL.en.md) |
 | Understand why a definition, method, or step in a proof makes sense | [explain-for-understanding](skills/explain-for-understanding/SKILL.md) |
 | Write or substantially revise a lecture chapter, including the background needed to follow it | [obsidian-lecture-writing](skills/obsidian-lecture-writing/SKILL.md) |
 
@@ -62,7 +62,9 @@ Or download this repository and copy the skill folders you want from `skills/` i
 
 The examples below use Codex syntax. In DSH, replace `$skill-name` with `/skill-name`, as shown in the [DSH guide](docs/dsh.md).
 
-### Understand a system through its evolution
+### How an Aircraft Carrier Is Built
+
+The Chinese display name is “航母是怎样建成的”; the invocation identifier remains `evolutionary-understanding`. The skill applies to the evolution of complex systems across domains. Both the instructions and software-history guide are available in English and Chinese through their language links.
 
 ```text
 Use $evolutionary-understanding to explain the major design changes in DSH.
