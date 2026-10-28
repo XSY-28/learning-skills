@@ -2,7 +2,7 @@
 
 [English](dsh.md)
 
-`dsh-learning-skills` 插件向 DSH 技能注册表提供三个技能。它们保留各自的名称、正文、参考文件和辅助脚本，与 Codex 安装共用源码目录。
+`dsh-learning-skills` 插件向 DSH 技能注册表提供四个技能。它们保留各自的名称、正文、参考文件和辅助脚本，与 Codex 安装共用源码目录。
 
 ## 安装和调用
 
@@ -17,6 +17,8 @@ dsh plugin --profile web add github:XSY-28/learning-skills
 在 DSH 中使用斜杠形式，而不是 Codex 的 `$名称`：
 
 ```text
+/evolutionary-understanding 基于 Git 的关键设计变更讲清 DSH 的演化，区分有记录的历史与推断。
+
 /explain-for-understanding 解释正则化。我会求导，但不明白为什么要在损失函数中加入惩罚项。
 
 /course-to-notes 把我提供的课程视频和同版本字幕的前 10 分钟整理成中文 Markdown 阅读稿，保存到 ./course-notes。
@@ -29,7 +31,7 @@ dsh plugin --profile web add github:XSY-28/learning-skills
 ## 依赖与限制
 
 - 已测试 SDK：DSH `0.1.7-rc.2`、Cordis `4.0.4`；Node.js `^22.19.0 || >=24.0.0`。peer 版本范围显式允许已测的预发布系列，后续预发布系列需重新核对兼容性。
-- 讲解和讲义技能没有辅助脚本依赖。课程脚本需要 Python 3.10+，抽帧需要 `PATH` 中的 `ffmpeg` 和 `ffprobe`。
+- 讲解、讲义和演化式理解技能没有辅助脚本依赖。课程脚本需要 Python 3.10+，抽帧需要 `PATH` 中的 `ffmpeg` 和 `ffprobe`。
 - 视频获取、转录、图像理解、文档导出与 Obsidian 界面检查取决于 DSH 中实际可用的工具和模型。本插件不提供这些能力，也不扩大权限。
 - 同一注册表 scope 中，项目或用户目录里的同名技能优先于本包默认值。希望使用本包版本时，注意是否保留了同名旧副本。
 - 包内直接提供 JavaScript 和资源，没有安装期构建；本包不需要批准 `prepare` 脚本。

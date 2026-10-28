@@ -2,7 +2,7 @@
 
 [中文](README.zh-CN.md)
 
-Three skills for Codex and DeepSeek Harness: turn lectures into notes, work through confusing concepts, and write chapters that can be read without the original chat.
+Four skills for Codex and DeepSeek Harness: turn lectures into notes, work through confusing concepts, write self-contained chapters, and understand complex systems through their evolution.
 
 Each skill is a folder of agent instructions. `course-to-notes` also includes scripts for subtitles, video frames, and output checks. You can install any of them on its own. The instructions are mainly in Chinese; you choose the output language.
 
@@ -11,6 +11,7 @@ Each skill is a folder of agent instructions. `course-to-notes` also includes sc
 | What you want to do | Skill |
 | --- | --- |
 | Find a course that fits your background, or turn a lecture into notes with timestamps and relevant images | [course-to-notes](skills/course-to-notes/SKILL.md) |
+| Understand a project, theory, or institution through its key changes and design tradeoffs | [evolutionary-understanding](skills/evolutionary-understanding/SKILL.md) |
 | Understand why a definition, method, or step in a proof makes sense | [explain-for-understanding](skills/explain-for-understanding/SKILL.md) |
 | Write or substantially revise a lecture chapter, including the background needed to follow it | [obsidian-lecture-writing](skills/obsidian-lecture-writing/SKILL.md) |
 
@@ -18,13 +19,13 @@ Each skill is a folder of agent instructions. `course-to-notes` also includes sc
 
 ### DeepSeek Harness
 
-Install all three as a DSH plugin in your chosen profile:
+Install all four as a DSH plugin in your chosen profile:
 
 ```sh
 dsh plugin --profile web add github:XSY-28/learning-skills
 ```
 
-In DSH, invoke `/course-to-notes`, `/explain-for-understanding`, or `/obsidian-lecture-writing`. See the [DSH guide](docs/dsh.md) for prerequisites, examples, and updates.
+In DSH, invoke `/course-to-notes`, `/evolutionary-understanding`, `/explain-for-understanding`, or `/obsidian-lecture-writing`. See the [DSH guide](docs/dsh.md) for prerequisites, examples, and updates.
 
 ### Codex
 
@@ -33,6 +34,7 @@ In Codex, send:
 ```text
 Use $skill-installer to install these paths from XSY-28/learning-skills:
 - skills/course-to-notes
+- skills/evolutionary-understanding
 - skills/explain-for-understanding
 - skills/obsidian-lecture-writing
 ```
@@ -49,7 +51,7 @@ If your Codex installation has the bundled installer at the standard location:
 ```sh
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --repo XSY-28/learning-skills \
-  --path skills/course-to-notes skills/explain-for-understanding skills/obsidian-lecture-writing
+  --path skills/course-to-notes skills/evolutionary-understanding skills/explain-for-understanding skills/obsidian-lecture-writing
 ```
 
 Or download this repository and copy the skill folders you want from `skills/` into your configured skills directory. Copy each whole folder, including its references, scripts, metadata, and license.
@@ -59,6 +61,16 @@ Or download this repository and copy the skill folders you want from `skills/` i
 ## Use
 
 The examples below use Codex syntax. In DSH, replace `$skill-name` with `/skill-name`, as shown in the [DSH guide](docs/dsh.md).
+
+### Understand a system through its evolution
+
+```text
+Use $evolutionary-understanding to explain the major design changes in DSH.
+Use its Git history, connect each change to its constraints and tradeoffs,
+and distinguish documented history from inference and teaching examples.
+```
+
+The skill selects changes by their effect on behavior and structure, preserves branches and reversals, and relates them to the current system. Section titles name the concrete change directly. It also applies to theories and institutions; it does not promise faster learning or treat a coherent narrative as evidence of mastery.
 
 ### Work through a concept
 
@@ -98,7 +110,7 @@ These workflows are for learning and teaching. A formula lookup, translation, or
 
 ## Requirements
 
-The explanation and chapter-writing skills have no script dependencies. The course helpers use Python 3.10+ and the standard library; extracting video frames also needs `ffmpeg` and `ffprobe` on `PATH`.
+The explanation, chapter-writing, and evolutionary-understanding skills have no script dependencies. The course helpers use Python 3.10+ and the standard library; extracting video frames also needs `ffmpeg` and `ffprobe` on `PATH`.
 
 Video access, audio transcription, and Word/PDF export depend on tools available in your agent environment. This repository does not include a video downloader, transcription model, or document converter.
 

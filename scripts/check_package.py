@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-NAMES = ('course-to-notes', 'explain-for-understanding', 'obsidian-lecture-writing')
+NAMES = ('course-to-notes', 'evolutionary-understanding', 'explain-for-understanding', 'obsidian-lecture-writing')
 
 
 def outside_fences(text):

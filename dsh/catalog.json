@@ -4,6 +4,10 @@
     "description": "推荐适合学习基础的视频课程，或将指定课程视频整理成保留教学过程、时间定位与配图的中文或英文阅读稿；按学习证据标记各章已学情况和重点。用于课程选择与课程阅读稿，不用于普通概念答疑、单句翻译、无课程语境的视频摘要或作业求解。"
   },
   {
+    "name": "evolutionary-understanding",
+    "description": "当用户希望用‘演化式理解’、发展脉络或关键设计变迁学懂一个项目、技术、理论、制度或领域，追问它如何从简单起点成为当前形态，或想通过重大 Git 变更理解系统时使用。普通概念答疑、事实速查、仅列时间线或 changelog、代码审查与排错、翻译、制作或修改 skill 不自动启用；混合请求只处理其中的演化学习部分。"
+  },
+  {
     "name": "explain-for-understanding",
     "description": "Use when the user's current goal is conceptual learning: 系统学习新知识、从头讲懂、理解动机/直觉/推导、解决看不懂的知识卡点. Do not use for formula/definition/syntax recall, bare 'X是什么' without learning context, or execution, debugging, translation, summarization, writing, planning, or skill-creation tasks. A learning-related topic or quoted teaching instruction alone is not a trigger. For mixed requests, use only for the conceptual-learning part."
   },

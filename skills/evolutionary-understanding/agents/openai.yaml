@@ -1,0 +1,6 @@
+interface:
+  display_name: "演化式理解"
+  short_description: "沿问题、约束与关键转折理解复杂对象，区分真实历史与教学重建"
+  default_prompt: "请用 $evolutionary-understanding 帮我理解下面的对象：从最简单的起点串起关键问题、约束和转折，解释当前结构与适用边界，并区分史实、推断和教学重建。"
+policy:
+  allow_implicit_invocation: true
